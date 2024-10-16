@@ -1,0 +1,202 @@
+/*
+   CSS styling examples for the Vaadin app.
+
+   Visit https://vaadin.com/docs/styling/application-theme/ for more information.
+*/
+
+@media all and (max-width: 1100px) {
+    .list-view.editing .toolbar,
+    .list-view.editing .contact-grid {
+        display: none;
+    }
+}
+
+flow-container-root {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    overflow: hidden !important;
+}
+
+a[highlight] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.right-container {
+    display: flex;
+    margin-left: auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-default {
+    cursor: default;
+    user-select: none;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+}
+
+.logout-button-mobile {
+    display: none;
+    justify-content: center;
+}
+
+@media (max-width: 496px) {
+    .logout-button-mobile {
+        display: flex;
+        justify-content: center;
+    }
+
+    .logout-button {
+        display: none;
+        justify-content: center;
+    }
+}
+
+.logo-pc-version {
+    display: flex;
+    align-items: center;
+}
+
+.logo-mobile-version {
+    display: none;
+    justify-content: center;
+}
+
+@media (max-width: 496px) {
+    .logo-pc-version {
+        display: none;
+        justify-content: center;
+    }
+
+    .logo-mobile-version {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.no-outline:focus {
+    outline: none !important;
+    --_focus-ring-color: none !important;
+}
+
+.side-nav-custom {
+    /* --lumo-primary-color-10pct: hsla(214, 100%, 60%, 0.0);
+     background-color: var(--lumo-primary-color-10pct);*/
+    user-select: none;
+}
+
+.custom-drawer {
+    width: 1000px; /* Ajustează lățimea dorită */
+}
+
+@media (max-width: 767px) {
+    .custom-drawer {
+        width: 80%; /* Lățime mai mică pe ecrane mobile */
+    }
+}
+
+.image-size {
+    width: 50%; /* Ajustează lățimea dorită */
+    height: 50%;
+}
+
+@media (max-width: 767px) {
+    .image-size {
+        width: 90%;
+        height: 90%;
+    }
+}
+
+.form-control:focus {
+    outline: none; /* Elimină conturul */
+    box-shadow: none; /* Elimină umbra */
+}
+
+.limited-text {
+    display: -webkit-box; /* Folosește modelul de boxare WebKit */
+    -webkit-box-orient: vertical; /* Setează orientarea box-ului pe verticală */
+    -webkit-line-clamp: 3; /* Limitează textul la 3 rânduri */
+    overflow: hidden; /* Ascunde textul care depășește dimensiunea containerului */
+    text-overflow: ellipsis; /* Adaugă puncte de suspensie la sfârșitul textului tăiat */
+}
+
+.limited-title {
+    display: -webkit-box; /* Folosește modelul de boxare WebKit */
+    -webkit-box-orient: vertical; /* Setează orientarea box-ului pe verticală */
+    -webkit-line-clamp: 2; /* Limitează textul la 3 rânduri */
+    overflow: hidden; /* Ascunde textul care depășește dimensiunea containerului */
+    text-overflow: ellipsis; /* Adaugă puncte de suspensie la sfârșitul textului tăiat */
+linear-gradient(45deg, #553c9a, #ee4b2b);
+}
+
+.custom-anchor {
+    color: inherit; /* Folosește culoarea textului părintelui */
+    text-decoration: none; /* Elimină sublinierea */
+}
+
+.custom-anchor:hover {
+    text-decoration: none;
+}
+
+.custom-title-blog {
+    font-family: Segoe UI, sans-serif; /* Fontul dorit */
+    font-size: 23px; /* Dimensiunea dorită */
+    font-weight: bold;
+    margin-bottom: 0; /* Echivalent cu mb-0 */
+    display: -webkit-box; /* Pentru line-clamp */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Limitează la 2 rânduri */
+    overflow: hidden;
+    user-select: none;
+    text-overflow: ellipsis; /* Puncte de suspensie */
+    transition: color 0.15s ease-out; /* Efect de tranziție pentru culoare */
+    background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.custom-title-blog:hover {
+    background-image: linear-gradient(45deg, #d796f8, #2cd4ff);
+}
+
+.rounded-image {
+    border-radius: .5rem; /* Colțuri complet rotunde (cerc) */
+    /* Sau poți folosi o valoare specifică, de exemplu: */
+    /* border-radius: 15px; */ /* Colțuri rotunjite, dar nu complet circulare */
+}
+
+.no-drag {
+    -webkit-user-drag: none; /* Safari */
+    -khtml-user-drag: none; /* Konqueror HTML */
+    -moz-user-drag: none; /* Firefox */
+    -o-user-drag: none; /* Opera */
+    user-drag: none; /* CSS standard */
+}
+
+
+input:-webkit-autofill {
+    /* Expose a hook for JavaScript when auto fill is shown. */
+    /* JavaScript can capture 'animationstart' events */
+    animation-name: onAutoFillStart;
+
+    /* Delay the autofill background color from appearing */
+    transition: background-color 0s 86400s;
+}
+
+input:not(:-webkit-autofill) {
+    /* Expose a hook for JS onAutoFillCancel */
+    /* JavaScript can capture 'animationstart' events */
+    animation-name: onAutoFillCancel;
+}
+
+
